@@ -9,7 +9,10 @@ import java.io.IOException
 private const val STARTING_PAGE_INDEX = 1
 class CatPagingSource(private val api: CatApi) : PagingSource<Int, Cat>() {
     override fun getRefreshKey(state: PagingState<Int, Cat>): Int? {
-        TODO("Not yet implemented")
+        return state.anchorPosition?.let {anchorPosition ->
+            state.closestPageToPosition(anchorPosition)?.prevKey?.plus(1)?:
+            state.closestPageToPosition(anchorPosition)?.nextKey?.minus(1)
+        }
     }
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Cat> {

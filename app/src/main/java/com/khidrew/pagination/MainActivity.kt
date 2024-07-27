@@ -8,6 +8,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.databinding.DataBindingUtil
 import com.khidrew.pagination.databinding.ActivityMainBinding
+import com.khidrew.pagination.view.db.DatabaseActivity
+import com.khidrew.pagination.view.networkanddb.NetworkAndDatabaseActivity
 import com.khidrew.pagination.view.netwrok.NetworkActivity
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -29,10 +31,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, NetworkActivity::class.java))
         }
         binding.database.setOnClickListener{
-
+            startActivity(Intent(this, DatabaseActivity::class.java))
         }
         binding.networkanddatabase.setOnClickListener{
-
+            startActivity(Intent(this, NetworkAndDatabaseActivity::class.java))
         }
 
     }

@@ -9,7 +9,7 @@ plugins {
 
 
     val versions = mapOf(
-        "paging"          to "3.0.0-rc01",
+        "paging"          to "3.3.1",
         "coroutines"      to "1.4.2",
         "retrofit"        to "2.9.0",
         "lifecycleVersion" to "2.2.0",
@@ -18,7 +18,7 @@ plugins {
         "moshi"           to "1.11.0",
         "okhttp3_logging" to "4.9.0",
         "coil"            to "1.0.0",
-        "room"            to "2.3.0-beta02"
+        "room"            to "2.6.1"
     )
 
 android {
@@ -110,5 +110,6 @@ dependencies {
     // room
     implementation("androidx.room:room-runtime:${versions["room"]}")
     implementation("androidx.room:room-ktx:${versions["room"]}")
+    implementation("androidx.room:room-paging:${versions["room"]}")
     kapt ("androidx.room:room-compiler:${versions["room"]}")
 }

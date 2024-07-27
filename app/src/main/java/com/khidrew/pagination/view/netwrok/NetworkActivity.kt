@@ -22,7 +22,7 @@ class NetworkActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityNetworkBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        initAdapter()
+        initAdapter(false)
         lifecycleScope.launch {
             viewModel.cats.collectLatest {
                 adapter.submitData(it)
