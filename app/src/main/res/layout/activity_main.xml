@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+    </data>
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginHorizontal="16dp"
+        tools:context=".MainActivity">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/network"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Network Only" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/database"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Database Only" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/networkanddatabase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Network and Database" />
+
+    </LinearLayout>
+</layout>
